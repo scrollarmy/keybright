@@ -6,7 +6,7 @@
     */  
     (function() {
     //refers to the folder /img/courierNew/ containing all letters images
-    var _FONT = "courierNew";
+    var _FONT = "georgia";
     var soundType = new Howl({urls: ['../../sound/key1.ogg']});
     var soundSpace = new Howl({urls: ['../../sound/space1.ogg']});
 
@@ -142,8 +142,8 @@
                     strokeStyle: '#ffffff',
                     sprite: {
                         texture: './img/'+_FONT+'/'+charCode+'.png',
-                        xScale: .46,
-                        yScale: .50
+                        xScale: .40,
+                        yScale: .40
                     }
                 }
             })
@@ -154,7 +154,7 @@
         var body = bodies[bodies.length-1];
         Body.applyForce(body, { x: keyboardX + (-0.5+x_fraction)*keyboardSX/1.7, y: keyboardY - keyboardSY/2-1 }, { 
             x: Math.random()*0.001, 
-            y: -.007-0.005*Math.random()
+            y: -.007-0.002*Math.random()
         });
 
         //Sound
@@ -173,8 +173,8 @@
             var body = bodies[i];
 
             Body.applyForce(body, { x: 0, y: 0 }, { 
-                x: 0.04*(Math.random()-.5), 
-                y: 0.04*(Math.random()-.5)
+                x: 0.005*(Math.random()-.5), 
+                y: 0.005*(Math.random()-.5)
             });
         }
         
